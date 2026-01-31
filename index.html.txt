@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Just One Question 💕</title>
+
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: #fff5f8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    img {
+      width: 280px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+    }
+
+    #yes {
+      background-color: #ff5fa2;
+      color: white;
+      margin-right: 20px;
+    }
+
+    #no {
+      background-color: #b0b0b0;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- YOUR PHOTO -->
+  <img src="photo.jpg" alt="Us">
+
+  <!-- YOUR SENTENCE -->
+  <h2>im your one and only right?!!</h2>
+
+  <div>
+    <button id="yes" onclick="goYes()">YES 💖</button>
+    <button id="no">NO 🙃</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 120);
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    });
+
+    function goYes() {
+      window.location.href = "yes.html";
+    }
+  </script>
+
+</body>
+</html>
